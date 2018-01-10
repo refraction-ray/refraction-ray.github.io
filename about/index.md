@@ -18,16 +18,18 @@ comments: false
 
 # Contact Me
 ## Public Key
-[see here](/about/public-key.txt) (make sure the url you are visiting is https://refraction-ray.github.io/about/public-key.txt)
+See [here](/about/public-key.txt) (make sure the url you are visiting is <https://refraction-ray.github.io/about/public-key.txt>)
+
+Or from [here](https://pgp.mit.edu/pks/lookup?op=get&search=0x6AE1EACBD99AF122), the fingerprint is `53C6 5FE2 3CAB 6CE2 8D86  1D55 6AE1 EACB D99A F122`
 
 ## Wallet Address
 
-* BTC address: 1LhxbQ5LRScrAvCbp1af4VXdTnd51cZQvw
-* BCH address: 1Q2Qqckh4cLL1xdHu4Z3Khi8rsP9mNutw3
-* ETH address: 0x877f76C3dCD183843723E449E351d2645D33269A
+* BTC address: `1LhxbQ5LRScrAvCbp1af4VXdTnd51cZQvw`
+* BCH address: `1Q2Qqckh4cLL1xdHu4Z3Khi8rsP9mNutw3`
+* ETH address: `0x877f76C3dCD183843723E449E351d2645D33269A`
 
 ## Mail
-锌铁锡铅氢 在 Alphabet Inc
+Pls use the one in the public key.
 
 ## Telegram
 ~~~javascript
