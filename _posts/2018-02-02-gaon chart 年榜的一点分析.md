@@ -13,7 +13,7 @@ comments: true
 
 
 
-｜ ![gaon_digital_top10.pdf](/images/gaon_digital_top10.pdf) |
+| ![gaon_digital_top10.pdf](/images/gaon_digital_top10.pdf) |
 | :--------------------------------------: |
 |         *2011到2017， 年榜音源 TOP10*          |
 
