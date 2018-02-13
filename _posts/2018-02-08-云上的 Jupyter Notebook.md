@@ -3,11 +3,13 @@ layout: post
 title: "云上的 Jupyter Notebook"
 date: 2018-02-08
 excerpt: "Jupyter Notebook 在 web 端的一些剪影和利用"
-tags: [machine learning, python，finance, web]
+tags: [machine learning, python, finance, web, data science]
 comments: true
 ---
 * toc 
 {:toc}
+*别怕，浏览器那个 hello 提醒框是我弹的，没有安全问题，请继续阅读。*
+
 # 引言
 
 知道 Ipython Notebook 差不多和开始接触 python 同一时间，交互式的设计和我适应的 mathematica 的 notebook 设计异曲同工。这种边做边试边反馈边记录的方式，无疑非常适合科研试验或数据处理分析可视化等任务，比传统的运行单文件的方式效率高了不少。
@@ -84,7 +86,7 @@ Jupyter notebook 已经远超过了交互式 python 笔记本的范畴，其不�
 
 <iframe src="https://nbviewer.jupyter.org/gist/refraction-ray/2ead8ac5efdc0382d8a5e3d863f5425b" width="100%" height="2000"></iframe>
 
-结果非常震撼，基于 web 的交互，这个 web 基因不是随便说说的，这货已经强悍到前端用它来调试了吧。无论是 html5，css，javascript，甚至是引入 jQuery 库，notebook 全可以完美消化。就不要提对 markdown 的支持和 latex 的简单支持了。我强烈建议读者将上面的全部代码和内容细读一边，这才能更好的认识到notebook的潜力，web基因不是开玩笑的。当然也要感谢 nbview 可以给出这么大的宽容度，允许用户的js脚本发挥效应，使得这个ipynb在互联网上就能得到充分的显示（不得不说，这样做面临XSS攻击的压力还挺大的，比如里面我写的没有恶意的js `alert`）。
+结果非常震撼，基于 web 的交互，这个 web 基因不是随便说说的，这货已经强悍到前端用它来调试了吧。无论是 html5，css，javascript，甚至是引入 jQuery 库，notebook 全可以完美消化。就不要提对 markdown 的支持和 latex 的简单支持了。我强烈建议读者将上面的全部代码和内容细读一边，这才能更好的认识到notebook在web展示方面的潜力。当然也要感谢 nbviewer 可以给出这么大的宽容度，允许用户的js脚本发挥效应，使得这个ipynb在互联网上就能得到充分的显示（不得不说，这样做面临XSS攻击的压力还挺大的，比如里面我写的没有恶意的js `alert`）。*所以当你打开此页看到弹出的 hello 对话框时也别慌*。唯一的一点遗憾是 nbviewer 似乎不支持 mathematica 语法高亮，而在原始的 jupyter notebook 里是支持的。
 
 ## pyecharts
 
@@ -92,7 +94,7 @@ Jupyter notebook 已经远超过了交互式 python 笔记本的范畴，其不�
 
 pyecharts 基本用法是生成可以被浏览器渲染成图片的含 echart.js 代码的html。不过正好借助 notebook 本身的 web 特性，pyecharts 可以直接出图，显示在notebook里面。这个库的另一个用途是结合在 web 框架里，这样后端 python 可以直接通过该库生成 js 代码返回给前端，从而把画图的任务甩锅到后端。同时 pyecharts 还直接支持 numpy 和 pandas 的数据结构来画图，简直幸福到没朋友。
 
-具体事例和用法这里就不详细介绍了，你可以去官方实例的[repo](https://github.com/pyecharts/pyecharts-users-cases)去学习一个。唯一要强调的，用这库在 Jupyter 内部显示都没问题，如果想要导出的 html 格式也能正确的嵌入可以被渲染成交互图片的 js 代码，需要在notebook里加上这句 `pyecharts.online()`，无视那个提醒就好了，据说这个提醒和函数的取代计划已经终止，见这个[issue](https://github.com/pyecharts/pyecharts/issues/324)。加了这行命令，notebook 导出成 html 后就能正常显示图片了。但是，经我测试，这里似乎有个小问题，page对象生成的图片，似乎加了online也无法以能被浏览器渲染的正确形式导出（version 0.3.1）。
+具体事例和用法这里就不详细介绍了，你可以去官方实例的[repo](https://github.com/pyecharts/pyecharts-users-cases)学习一个。唯一要强调的，用这库在 Jupyter 内部显示都没问题，如果想要导出的 html 格式也能正确的嵌入可以被渲染成交互图片的 js 代码，需要在notebook里加上这句 `pyecharts.online()`，无视那个提醒就好了，据说这个提醒和函数的取代计划已经终止，见这个[issue](https://github.com/pyecharts/pyecharts/issues/324)。加了这行命令，notebook 导出成 html 后就能正常显示图片了。但是，经我测试，这里似乎有个小问题，page对象生成的图片，似乎加了online也无法以能被浏览器渲染的正确形式导出（version 0.3.1）。
 
 既然说到了可视化，就也提一句 jupyter 项目官推的 [widgets](http://jupyter.org/widgets)，目的也是实现各种可以交互的基于web的可视化。
 
@@ -127,7 +129,35 @@ nbconvert 的自带的 html 模板包括 full 和 basic，如果不指定则默�
 
 之后访问官方的 [nbviewer](https://nbviewer.jupyter.org/) 服务，将对应gist的url复制到选框，即可得到 ipynb 的最终渲染效果，其使用的后台引擎就是前文提到的 nbconvert。这样就可以将最后得到的 nbview 的url分享出去，供大家欣赏批判了。而如果想在博客里引用的话，直接加一个 iframe 的 html 标签，并把 src 指向该网址就大功告成了。这一系列工作流的最后效果正如[上节](#markdownhtml)引用 notebook 展示出的那样。
 
-# Google Colabrotary 机器学习
+# Google Colaboratory 机器学习
+
+聊完了 Jupyter Notebook 的基础实践，再来看看网络服务以 Jupyter notebook 为交互接口的实例。
+
+google 的 colaboratory 项目，说白了就是 google drive 里的 ipynb。这一集成巧妙结合了 google drive 的优势（共享交流，协作办公，随时随地同步）和 jupyter notebook 的优势 （交互式命令，所见即所得）。最吸引人之处还在于，这些notebook可以直接在 google drive 里创建和运行，不需要上传下载，并且，运行的后台可以选择 google 免费提供的 GPU Tesla K80！这羊毛不薅，简直对不起社会主义核心价值观！
+
+colaboratory 的使用也很简单，直接在 google drive 里右击，在 more 里选择 colaboratory。如果没有该选项的话，先在右击－更多－关联更多应用里找到 colaboratory 并关联。之后打开新建的 ipynb 文件，在编辑－笔记本设置里，将硬件加速器设置为GPU即可。接下来一切都和普通的 notebook 无疑，除了其背后运行的是免费的 GPU 羊腿， enjoy！
+
+这一项目的后台，已经安装好了基本的数据处理库 numpy，pandas等；谷歌全家桶，也即和谷歌各种服务API交互的python库；以及重头戏 tensorflow 的机器学习库等。至于 keras 之类，也可以在 notebook 里 `!pip install keras`来安装。方便的开箱即用，配上后面的强劲 GPU，再加上一键式的分享和协作体验，不来跑跑神经网络都觉得亏了。于是我在上面跑了个[上篇博客](/VAE的逻辑与实践)提到的识别生成手写数字的 VAE 网络，速度在GPU里，我没什么比较，但至少比我用 CPU 跑，提升了一个数量级。羊腿不仅免费还这么粗，大写的服！
+
+使用 google colaboratory 的详细步骤可以参考[这篇文章](https://medium.com/deep-learning-turkey/google-colab-free-gpu-tutorial-e113627b9f5d)。这篇博客里讲解了将自己的 google drive mount到 notebook 后台硬盘的方法。用这种方式可以更灵活的运行 .py 文件和上传下载数据。
+
+同时这篇博客还介绍了查看 notebook 后台硬件信息的方法。其实我们还可以更进一步，比如 `!cat /etc/issue`得知google在notebook的后台用的操作系统是 Ubuntu 17.10，用`!df -h`查看后台的硬盘分区情况。最恐怖的是，`whoami` 的返回结果是 root，apt install 的权限是放开的可以佐证root身份。这意味着除了前端的 notebook，后端似乎想象空间更大，毕竟 notebook 命令前加个感叹号，就和 ssh 到服务器后台没什么区别（而且你还有 sudo）。比如谷歌虽然阉割了后台的 ping 命令，但可以直接 `apt install -y hping3`，马上就获得了更加强大的 ping 工具。总之 colaboratory 服务器后台到底可以实现哪些东西，就看你的想象力啦，但个人不建议玩坏了。
 
 # Joinquant 量化分析
+
+另一个以 notebook 为交互界面的网络服务，就是最近几年在国内兴起的互联网量化平台，这种平台以 [quantopian](https://www.quantopian.com/) 为模板，如雨后春笋般出现（[Ricequant 米筐科技](https://www.ricequant.com/)，[Joinquant 聚宽](https://www.joinquant.com/)，[Uqer 优矿](https://uqer.io/home/)）。我们这里以聚宽 Joinquant 为例，做一点简单的介绍。
+
+这类网站基本都使用 python 语言。有两种基本的交互方式，一种是编写固定范式的内容，从而实现交易策略，进而利用平台的数据和引擎做回测分析和模拟交易。当然国内实时自动化交易并不放开，因此除了私下里使用破解某几家券商交易接口 API 的方案，正规渠道最多只能做到模拟交易和交易提醒。
+
+另一种交互方式就是以notebook为交互界面，利用平台的数据 API，做一些数据研究和想法验证。这种模式在上文 google 的 colaboratory 的基础上更进一步。 google 只提供免费的计算资源，而这些量化网站，不只提供免费的计算资源，还提供免费的金融数据。要知道，靠谱的金融数据可都是很昂贵的。
+
+以聚宽为例，网站免费提供计算所需的CPU，内存（限量1G）和硬盘空间（没有找到限制说明，也很有想象空间哦）。另外还提供 A 股股票价格公司财务指数成份经济基本面等大量05年以来的历史数据。因此在平台上利用这些数据 API，和 pandas 库，简单的几十行 python 就能做出很多有趣的分析和量化研究。比如自己计算指数市盈率并分析历史分位，用来指导指数定投等。此外，聚宽的研究模块支持 pyecharts，可以直接将数据结果可靠可交互的可视化，比 matplotlib 高到不知哪里去了，对于细节丰富的金融数据可视化，图片可交互性是非常关键的。此外聚宽的回测模块还支持研究模块的 py 文件直接 import，使得在 notebook 的研究成果和编写的函数，能够方便地应用到策略编写上。
+
+关于数据的获取，平台原则上是不允许数据在平台之外使用和导出的，但量化平台往往都没有特别限制这一点。因此，对于自己想要的数据，只需平台上用 API 拿到，并 `to_csv()` 将拿到的数据作为文件导入到个人空间，之后逐一文件下载下来即可。如果嫌麻烦，也可以抓个包，看看文件下载的 http 请求，自己写个命令行自动批量下载即可。还是再提一句，注意别玩坏哦。
+
+最后，还是把目光放到 notebook 后台服务器上，聚宽的后台用的是 Debian，让我们看看这一次感叹号魔法又如何。
+
+<iframe src="https://nbviewer.jupyter.org/gist/refraction-ray/be904f07dcb7a6b34dbc73e96fad6b91" width="100%" height="600"></iframe>
+
+EOF
 
