@@ -12,6 +12,7 @@ comments: false
 * Math
 * Education
 * Finance
+* Language
 * Coding
 * Tech
 * K-Pop
