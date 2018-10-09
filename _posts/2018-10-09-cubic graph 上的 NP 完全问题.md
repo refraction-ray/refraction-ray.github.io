@@ -124,19 +124,19 @@ $$E_3$$ = {对于每个3变量分句出现的3个变量的相互三条边都连�
 
 下面来证明nae 2-3SAT可以为真等价于该图存在 independent set 元素数大于等于$$4c_1$$。
 
-若存在一组变量的 assigment 使得表达式为真，那么将对应为真的顶点选为 independent set。注意若一个分句中，有两个变量为真，那么随机选一个放入 independent set。根据边的构成，可知这些顶点不会有边相连，而顶点的总数目为$$4c_i$$。
+若存在一组变量的 assigment 使得表达式为真，那么将对应为真的顶点选为 independent set。注意若一个分句中，有两个变量为真，那么随机选一个放入 independent set。根据边的构成，可知这些顶点不会有边相连，而顶点的总数目为$$4c_1$$。
 
-反之，注意到该图中的环结构和三角形，使得该图理论上的最大 independent set 就是 $$4c_i$$，如果取到了该值，则说明恰好所有的环中有一半交替顶点和所有三角形中各有一个顶点在该 set 中。如果我们将 set 中的顶点代表的变量赋值为真，可以根据边的定义验证其相容性。因此每个三角形，也即分句中，都有一个变量为真，原3SAT表达式满足。证毕
+反之，注意到该图中的环结构和三角形，使得该图理论上的最大 independent set 就是 $$4c_1$$，如果取到了该值，则说明恰好所有的环中有一半交替顶点和所有三角形中各有一个顶点在该 set 中。如果我们将 set 中的顶点代表的变量赋值为真，可以根据边的定义验证其相容性。因此每个三角形，也即分句中，都有一个变量为真，原3SAT表达式满足。证毕
 
-事实上，上面证明，不只是图的构造，连选取的顶点集合都和 MAX CUT 情形一样。这应该理解为 nae 2-3SAT 对应图的特殊性，一般图上 MAX CUT 对应的顶点集合和 max independent set 对应的集合不一定相同。
+事实上，上面证明，不只是图的构造，连选取的顶点集合都和 MAX CUT 情形一样。这应该理解为2-3SAT对应图的特殊性，一般图上 MAX CUT 对应的顶点集合和 max independent set 对应的集合不一定相同。
 
-而对于 max independent set 在 cubic 图上的证明，也可以采用相同的构件添加方案。此时无论原图中度数为2的点是否在 set 中，新加的部分，每个都只能在 set 中增加两个点。也即原图存在不小于$$4c_i$$的 independent set 等价于新的 cubic graph 存在不小于 $$10c_i$$ 的 set。
+而对于 max independent set 在 cubic 图上的证明，也可以采用相同的构件添加方案。此时无论原图中度数为2的点是否在 set 中，新加的部分，每个都只能在 set 中增加两个点。也即原图存在不小于$$4c_1$$的 independent set 等价于新的 cubic graph 存在不小于 $$10c_1$$ 的 set。
 
 由此我们完成了 max independent set 在 cubic 图上依旧NP完全的证明。但事实上，后面的物理部分需要更强的结论，也即 cubic planar 图上的NP完全。我能找到的证明中最强的结论则是 [4] 中的 Theorem 2.7，作者证明了顶点至多度数为6的 planar graph 上，max independent set 问题NP完全。
 
 *更新*：(以下内容的正确性更加不确定，只是我现时的一个理解)
 
-考虑到 planar 3SAT 也在NP完全之中 (见 [9]，[10])，那么上面证明时用到的 cubic 图自然是 planar graph。由此最初证明未找到的 cubic planar graph 上的 max independent set 是NP完全得证。
+考虑到 planar 3SAT 也在NP完全之中 (定义和证明见 [9]，[10]，只需巧妙构造一个真值保持的 crossover gadget 来替代所有边的交叉点，即可完成从 3SAT 的归约)，那么上面证明时用到的 cubic 图自然是 planar graph。由此最初证明未找到的 cubic planar graph 上的 max independent set 是NP完全得证。
 
 进一步的提醒：注意到 MAX CUT 问题在 planar graph 上可以转化到最大匹配问题，从而是在 P (见 [11])，两问题在平面图上复杂度不同，而证明高度相似可能的解释是，只有3SAT的平面图版本是NP完全的，而 nae 3SAT 平面图版本不是。原因在于，MAX CUT 证明严格依赖于3变量分句的变量不能都为真，而 independent set 的分析中对分句变量是否都真不敏感。这一理解很可能是对的，因为我又找到了 [12]。其答案指出
 
