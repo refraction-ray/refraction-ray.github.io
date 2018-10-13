@@ -12,7 +12,7 @@ comments: true
 {:toc}
 ## 引言
 
-这篇算是**物理学中的计算理论**正式的序章，我将从 3SAT 出发，给出一个约化到 cubic graph 上的 MAX CUT 问题的证明。本来这篇是要讲两个NP完全问题的证明，以用来证明物理系统中的 NP 困难问题。但第二个问题：Maximum independent set in a planar cubic graph 的完整证明，我并没有找到，因为所有的参考文献都指向了一个找不到的引用：Maire, D., and Storer, J. A. 1977, *A note on the complexity of the superstring problem*, Tech Report N. 233, Princeton University. 而且我不是一个人，[2] 引用这篇时，还特意加上了句 as cited in [3]，说明 [2] 作者也没找到这篇文献。不过 [4] 有一个该问题弱化版的证明，给出了 at most cubic graph 和 planar at most degree-six graph 的肯定结果，我们在证明我们的主要结论，第一个NP完全问题后，会稍微跑个题证一下第二个问题的弱化版。
+这篇算是**物理中的计算理论**正式的序章，我将从 3SAT 出发，给出一个约化到 cubic graph 上的 MAX CUT 问题的证明。本来这篇是要讲两个NP完全问题的证明，以用来证明物理系统中的 NP 困难问题。但第二个问题：Maximum independent set in a planar cubic graph 的完整证明，我并没有找到，因为所有的参考文献都指向了一个找不到的引用：Maire, D., and Storer, J. A. 1977, *A note on the complexity of the superstring problem*, Tech Report N. 233, Princeton University. 而且我不是一个人，[2] 引用这篇时，还特意加上了句 as cited in [3]，说明 [2] 作者也没找到这篇文献。不过 [4] 有一个该问题弱化版的证明，给出了 at most cubic graph 和 planar at most degree-six graph 的肯定结果，我们在证明我们的主要结论，第一个NP完全问题后，会稍微跑个题证一下第二个问题的弱化版。
 
 另外关于 MAX CUT 在 cubic graph 上的证明，虽然 [1] 号称证明了，但没给出任何证明的细节，甚至框架都不怎么有，因此本文完全是我自己参考 MAX CUT 在一般图上的证明做的改造 (参考 [5] 的习题 7.24，7.25)，[1] 的 Lemma 5 也给了我一些灵感。当然证明和程序一样，很有可能有 bug 甚至完全是错误的，鉴于是我自己思考的证明，错误的可能性更大。如果读者发现了证明中的漏洞，希望可以指出。
 
