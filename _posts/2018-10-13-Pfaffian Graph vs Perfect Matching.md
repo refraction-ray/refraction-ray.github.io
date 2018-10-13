@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pfaffian Graph vs Perfect Matching"
-date: 2018-10-12
+date: 2018-10-13
 excerpt: "计算图上 perfect matching 总数的数学工具"
 tags: [physics, graph theory, algebra]
 comments: true
