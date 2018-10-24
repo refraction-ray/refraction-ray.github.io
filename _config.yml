@@ -9,7 +9,7 @@ background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 # url:                https://refraction-ray.github.io
-# url:                 http://localhost:4000
+# url:                http://localhost:4000
 
 # Jekyll
 permalink:          /:title/
@@ -25,7 +25,9 @@ mathjax:            true
 sass:
   sass_dir:         _sass
   style:            compressed
-
+# config the html compress, to avoid CDATA new line issue which is uncompatible with mathjax
+compress_html:
+  blanklines:       true
 # Comments
 disqus_shortname:   refraction-ray-disqus-com
 
@@ -45,7 +47,7 @@ google:
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
-# instagram:          username
+#instagram:          username
 #lastfm:            username
 #tumblr:            username
 #medium:            '@username'
