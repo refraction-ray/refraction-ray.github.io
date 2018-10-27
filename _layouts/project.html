@@ -22,6 +22,14 @@ layout: compress
                     </a>
                 </div>
                 <div class="post-list">
+                    <ul>
+                        <li class="wow fadeInLeft" data-wow-duration="1.5s">
+                            <form class="search" method="GET" action="https://www.google.com/search">
+                                <input type="text" name="as_q" class="search-query" placeholder="Search">
+                                <input type="hidden" name="as_sitesearch" value="{{ site.url }}">
+                            </form>
+                        </li>
+                    </ul>
                     {% for post in site.posts %} 
                         {% if post.project %}
                     <ul>
