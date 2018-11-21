@@ -57,6 +57,10 @@ form:hover .fa{
     background: white;
     color:  red;
 }
+//table-wrapper
+.table-wrapper {
+  overflow-x:auto;
+}
 // table css from github style: https://gist.github.com/andyferra/2554919
 table {
   padding: 0; }
