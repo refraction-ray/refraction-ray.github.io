@@ -5,7 +5,7 @@ form.search{
     left: 50%;
     transform: translate(-50%,-50%);
     transition: all 1s;
-    width: 50px;
+    width: 46px;
     height: 22px;
     background: white;
     box-sizing: border-box;
@@ -44,7 +44,7 @@ input{
     transition: all 1s;
 }
 
-form:hover{
+form:hover {
     width: 200px;
     cursor: pointer;
 }
@@ -55,7 +55,7 @@ form:hover input{
 
 form:hover .fa{
     background: white;
-    color:  red;
+    color:  $red;
 }
 //table-wrapper
 .table-wrapper {
