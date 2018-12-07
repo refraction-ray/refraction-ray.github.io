@@ -129,6 +129,8 @@ nbconvert 的自带的 html 模板包括 full 和 basic，如果不指定则默�
 
 之后访问官方的 [nbviewer](https://nbviewer.jupyter.org/) 服务，将对应gist的url复制到选框，即可得到 ipynb 的最终渲染效果，其使用的后台引擎就是前文提到的 nbconvert。这样就可以将最后得到的 nbview 的url分享出去，供大家欣赏批判了。而如果想在博客里引用的话，直接加一个 iframe 的 html 标签，并把 src 指向该网址就大功告成了。这一系列工作流的最后效果正如[上节](#markdownhtml)引用 notebook 展示出的那样。
 
+*更新*： 现在 github gist 上 host 的 ipynb 甚至在右上角都会有按钮，提示 gist 渲染不完整并自动给出 nbviewer 网址的跳转，所以这节的展示工作流已经属于钦定的了。
+
 # Google Colaboratory 机器学习
 
 聊完了 Jupyter Notebook 的基础实践，再来看看网络服务以 Jupyter notebook 为交互接口的实例。
@@ -142,6 +144,8 @@ colaboratory 的使用也很简单，直接在 google drive 里右击，在 more
 使用 google colaboratory 的详细步骤可以参考[这篇文章](https://medium.com/deep-learning-turkey/google-colab-free-gpu-tutorial-e113627b9f5d)。这篇博客里讲解了将自己的 google drive mount到 notebook 后台硬盘的方法。用这种方式可以更灵活的运行 .py 文件和上传下载数据。
 
 同时这篇博客还介绍了查看 notebook 后台硬件信息的方法。其实我们还可以更进一步，比如 `!cat /etc/issue`得知google在notebook的后台用的操作系统是 Ubuntu 17.10，用`!df -h`查看后台的硬盘分区情况。最恐怖的是，`whoami` 的返回结果是 root，apt install 的权限是放开的可以佐证root身份。这意味着除了前端的 notebook，后端似乎想象空间更大，毕竟 notebook 命令前加个感叹号，就和 ssh 到服务器后台没什么区别（而且你还有 sudo）。比如谷歌虽然阉割了后台的 ping 命令，但可以直接 `apt install -y hping3`，马上就获得了更加强大的 ping 工具。总之 colaboratory 服务器后台到底可以实现哪些东西，就看你的想象力啦，但个人不建议玩坏了。
+
+*更新*： google colaboratory 和 nbviewer 一样，现在接受任意 github 地址 ipynb 文件的渲染和导入，同时可以将 google drive 上的 notebook 直接存储在 github 或 gist 上。这就相当于一个可以运行版的 nbviewer，还可以免费蹭 google 的 GPU 和新出的 TPU 引擎，可以作为之后分享 ipynb 格式的首推方案（如果不考虑国内受众的网络因素的话）。不过 colab 的渲染不支持跨域，因此没有办法以 iframe 的方式在其他网站嵌入来呈现给读者，只能以分享链接的方式。值得一提的是 colab 的 UI 不完全和 jupyter notebook 一致，比较突出的是 colab 的笔记本具有按照标题级别进行内容折叠的功能。这一功能和 mathematica 中的对应功能一致，也是原生 jupyter notebook 的一个痛点，方便了文件变大之后的浏览和管理。具体 colab 和 github 互动的各种操作可以参见[这里](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb#scrollTo=WzIRIt9d2huC)，渲染服务基本和 nbviewer 这种后接 url 的方式一致。另外，ipynb 文件保持和 jupyter notbook UI 一致的渲染，也有了可以运行版本的选择，也即 mybinder 服务，可以查阅其[主页](https://mybinder.org/)。该服务在 nbviewer 渲染网页里，以最上方的一个按钮的形式出现。
 
 # Joinquant 量化分析
 
