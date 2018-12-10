@@ -3,7 +3,7 @@ layout: post
 project: true
 title: "Real space renormalization group"
 date: 2018-11-27
-excerpt: "Novel real space renormalization group numerical approach to investigate many-body (de)localization transitions"
+excerpt: "Novel real space RG numerical approach to investigate many-body (de)localization transitions"
 comments: true
 ---
 
