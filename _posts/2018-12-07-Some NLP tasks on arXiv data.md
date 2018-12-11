@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Some NLP tasks on arXiv data"
-date: 2018-11-21
+date: 2018-12-07
 excerpt: "利用一些 NLP 的工具处理 arxiv 元数据的尝试"
 tags: [python, machine learning, nlp]
 comments: true
