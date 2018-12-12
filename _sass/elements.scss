@@ -1,3 +1,10 @@
+li.wow {
+  transition: 2s;
+}
+li.wow:hover {
+  background: #e6e5de;
+
+}
 //selection
 ::selection {
   background: #f9f4df;
