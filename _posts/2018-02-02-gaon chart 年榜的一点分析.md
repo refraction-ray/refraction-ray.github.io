@@ -3,7 +3,7 @@ layout: post
 title: "gaon chart 年榜的一点分析"
 date: 2018-02-02
 excerpt: "从数据看K-Pop的发展变化"
-tags: [mathematica,data science]
+tags: [mathematica,data science, kpop]
 comments: true
 ---
 * toc
