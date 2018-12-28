@@ -1,0 +1,27 @@
+---
+layout: page
+title: Posts Archive
+description: "An archive of posts sorted by date."
+comments: false
+---
+{% assign year=3000 %}
+{% assign month=13 %}
+{% for post in site.posts %}
+{% if post.project == null %}
+{% assign postyear=post.date|date: "%Y" %}
+{% if year!=postyear %}
+{% assign year=postyear %}
+<h2 id="{{post.date|date:'%Y'}}">{{year}}</h2>
+{% endif %}
+{% assign postmonth=post.date|date: "%b"%}
+{% if month!=postmonth %}
+{% assign month=postmonth %}
+<h3 id="{{post.date|date:'%Y%b'}}">{{month}}</h3>
+{% endif %}
+<ul>
+    <li>
+        <a  style="text-decoration: none;" href="{{ site.url }}{{ post.url }}">{{ post.title }} </a><span>  ({{ post.date|date: "%b %d, %Y" }})</span>
+    </li>
+</ul>
+{% endif %}
+{% endfor %}
