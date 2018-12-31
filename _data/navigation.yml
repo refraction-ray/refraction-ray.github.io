@@ -2,3 +2,5 @@
 
 - title: Projects
   url: /projects/
+- title: RSS
+  url: /feed.xml

@@ -16,7 +16,8 @@ $(function() {
 });
 
 // All others
-window.onpageshow(function() {
+
+fade = function() {
     // zoom in/zoom out animations
     if ($(".container").hasClass('fadeOut')) {
         $(".container").removeClass("fadeOut").addClass("fadeIn");
@@ -54,4 +55,5 @@ window.onpageshow(function() {
     // make it unique to apply your CSS animations just to this exact popup
     mainClass: 'mfp-fade'
   });
-});
+};
+window.addEventListener('pageshow', fade);
