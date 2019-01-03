@@ -12,7 +12,7 @@ comments: true
 
 ## 引言
 
-关于 python import 机制的文章，可以说成千上万，被大家说烂了。但即使这样，似乎还是没人真的深入到问题的本质。就拿循环引用来说，为什么把引用语句扔到函数里面就可以，为什么有时这样还是会报错？python 文件以脚本模式运行和作为模块被导入时，都有哪些区别？本文围绕一个例子来彻底解决 import 的底层机制问题。本文例子全部使用 Python 3.6。
+关于 Python import 机制的文章，可以说成千上万，被大家说烂了。但即使这样，似乎还是没人真的深入到问题的本质。就拿循环引用来说，为什么把引用语句扔到函数里面就可以，为什么有时这样还是会报错？python 文件以脚本模式运行和作为模块被导入时，都有哪些区别？本文围绕一个例子来彻底解决 import 的底层机制问题[^doc]。本文例子全部使用 Python 3.6。
 
 ## `from` 引用的例子
 
@@ -156,13 +156,26 @@ finish register of fun e1
 finish register of fun e2
 ```
 
-除了这种引用，在 Python 3 中，将 `import app.e` 改成 `from . import e` 或是 `from app import e`，或是增加 `as` 子句都没有任何问题。总结起来就是，以模块形式导入就不需过于担心循环引用之类的问题，即使相应的对象还没来得及执行和注册到模块，只导入模块名也是安全的。注意绝对引用和相对引用（用到 `.` ）的区别在于，绝对引用是在系统路径 `sys.path` 中依次搜索对应的模块名，而相对引用是相对 `__file__` 的路径进行相对路径的查找。
+除了这种引用，在 Python 3 中，将 `import app.e` 改成 `from . import e` 或是 `from app import e`，或是增加 `as` 子句都没有任何问题。总结起来就是，以模块形式导入就不需过于担心循环引用之类的问题，即使相应的对象还没来得及执行和注册到模块，只导入模块名也是安全的。注意绝对引用和相对引用（用到 `.` ）的区别在于，绝对引用是在系统路径 `sys.path` 中依次搜索对应的模块名，而相对引用是相对 `__package__` 的路径进行相对路径的查找。
 
 ## 其他细节
 
 ### script 和 module 模式系统路径区别
 
 可以考察两种模式下 `sys.path[0]` 的不同之处。在 module 模式，也即 `python -m app.file`，路径中加入的是相对路径 `""`, 也即调用的工作目录。而在 script 模式下，也即 `python app/file.py`，路径中加入的是包含该 py 文件的文件夹的绝对路径[^syspath]， 也即 `/root/foo/bar/app`。
+
+### 引用任意路径 package 的解决方案
+
+最快速的办法就是在 import 之前加上 
+
+```python
+import sys
+sys.path.insert(0, "/abs/path/")
+"""
+import somepack
+"""
+```
+
 
 ### 包含 import 函数的字节码
 
@@ -196,6 +209,8 @@ dis.dis(f)
 可以看出，从根源上来讲， python 并不禁止循环引用，其也没有循环引用的概念。循环引用造成的错误，只是因为引用跳转，导致模块里需要被引用的函数还没来得及注册在模块里造成的而已。解决这个问题，可以把对应的模块引用放在对象声明之后，或对应的类或函数内部避免注册前的跳转。而这样做依旧可能遇到问题，只能沿着运行时的引用关系，慢慢分析。循环引用既不是错误，放在函数里的引用也不一定能解决该问题。import 的 silver bullet 只能是彻底弄懂 import 时到底发生了什么，记一些经验规律而不弄清其中的细节，总有遇到奇怪问题的时候。
 
 ## Reference
+
+[^doc]: [Python3 import doc](https://docs.python.org/3/reference/import.html)
 
 [^initpy]: [initpy not required in python3](https://stackoverflow.com/questions/37139786/is-init-py-not-required-for-packages-in-python-3)
 
