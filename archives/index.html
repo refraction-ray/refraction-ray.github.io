@@ -5,6 +5,20 @@ description: "An archive of posts sorted by date."
 comments: false
 ---
 {% assign year=3000 %}
+<h2>年份</h2>
+<ul id="markdown-toc">
+{% for post in site.posts %}
+{% if post.project == null %}
+{% assign postyear=post.date|date: "%Y" %}
+{% if year!=postyear %}
+{% assign year=postyear %}
+<li><a href="#{{post.date|date:'%Y'}}">{{year}}</a></li>
+{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
+
+{% assign year=3000 %}
 {% assign month=13 %}
 {% for post in site.posts %}
 {% if post.project == null %}
