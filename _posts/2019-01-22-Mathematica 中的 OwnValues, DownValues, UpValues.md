@@ -104,7 +104,7 @@ f[g[a,b]]
 
 `UpValues` 还有 UpSet 这一只属于自己的原语。即 `f[g[__]]^:=1`。这种方式和 `TagSet` 区别不大，唯一的一点区别可以参考[^tag]。
 
-说白了 UpValues 就是从内部魔改，考虑到 mma 运行机制是嵌套表达式从里到外，先分析各符号的 OwnValues，再依次分析 UpValues，DownValues。请看一下例子：
+说白了 UpValues 就是从内部魔改，考虑到 mma 运行机制是嵌套表达式从里到外，先分析各符号的 OwnValues，再依次分析 UpValues，DownValues。请看以下例子：
 
 ```mathematica
 Clear[f, g, h];
