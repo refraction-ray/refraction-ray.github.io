@@ -1,3 +1,9 @@
+.iframewrapper {
+  overflow: auto;
+  -webkit-overflow-scrolling:touch;
+  max-width: 100%;
+}
+
 iframe {
   border: none;
 }

@@ -18,7 +18,9 @@ SVD decomposition is frequently used in problems across various disciplines incl
 
 For how to use SVD methods with the three libraries and the subtle differences between them, please refer to the following notebook (the version info of system and libraries are also included in case further changes on corresponding APIs). A very short introduction on SVD formulas is also included in the following notebook, and I recommend you to read the wiki page if you are still unfamiliar with the concept of SVD.
 
+<div class="iframewrapper">
 <iframe src="https://nbviewer.jupyter.org/gist/refraction-ray/ec8c633d727744123a56b4c8cf122c75" width="100%" height="2800"></iframe>
+</div>
 
 To summarize the difference from the above notebook, please refer the following table.
 
