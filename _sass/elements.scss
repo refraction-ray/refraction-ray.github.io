@@ -196,7 +196,8 @@ table {
 .title .btn {
     margin: 10px;
     @include font-rem(16);
-    font-weight:300;
+    font-weight:350;
+    color: $color_subtitle;
 }
 .post-list {
     .btn {
