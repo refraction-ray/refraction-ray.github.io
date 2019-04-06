@@ -41,6 +41,8 @@ c.NotebookApp.port = 8888 # Optional, if you wanna change the default listening 
 c.NotebookApp.notebook_dir = "\path" # Optional, if you wanna change the working path of jupyter project
 ~~~
 
+*注：有些版本开启 `jupyter notebook`* 可能会报错 `ValueError: '' does not appear to be an IPv4 or IPv6 address`，此时只需将设置中的 ip 从 `*` 改为 `0.0.0.0` 即可。
+
 此时你已经可以从其他终端，用 ip 或者域名（如果你绑定了的话）来访问远程的 jupyter notebook了（当然前提是服务器 `jupyter notebook` 一下）。访问第一次会要求你输入 token，去服务器命令行 `jupyter notebook list` 一下，在输出运行的 jupyter 的url里就找到对应的 token 值。之后你就可以在前端 web 界面输入 token 并设置密码，此后就可以通过密码登陆了。
 
 ### 安全保证
