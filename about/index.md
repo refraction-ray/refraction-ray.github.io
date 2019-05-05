@@ -8,14 +8,31 @@ comments: false
 
 # About Me
 ## Interests
-* Physics
-* Math
-* Education
-* Finance
-* Language
-* Coding
-* Tech
-* K-Pop
+* Physics and Math
+  * Non-equilibrium thermodynamics
+  * Quantum algorithms and computational theory
+  * Interplay between correlation effects and topology characters
+  * Interplay between artificial intelligence and quantum physics
+* Computer Science and Technology
+  * High performance computing
+  * Web development
+  * Data science
+  * Machine learning
+* Economics and Finance
+  * Macroeconomics
+  * Quantitative finance
+  * Investment
+* Language and Culture
+  * Linguistics
+  * Korean language
+  * K-Pop music and Korean variety shows
+  * Various kinds of youtube channels
+  * Japanese language (*very early stage of learning*)
+* Misc
+  * Chinese history
+  * Education
+  * 评书，相声
+  * 红楼梦
 
 # Contact Me
 ## Public Key
@@ -32,11 +49,7 @@ Or from [here](https://pgp.mit.edu/pks/lookup?op=get&search=0x6AE1EACBD99AF122),
 ## Mail
 Pls use the one in the public key.
 
-## Telegram
-~~~javascript
-location.href =
-"https://t.me/"+location.host.split('.')[0].replace('-','');
-~~~
+
 ## Disqus and Github issues
 
 You are welcome to comment on my blogs or contact me on this site via disqus system below the [posts](/posts/). 
