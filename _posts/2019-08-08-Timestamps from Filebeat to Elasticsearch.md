@@ -88,7 +88,7 @@ It is obviously some time mismatch issues related to timezone settings, but ther
 The answer to the first question: logs have different forms. For nginx/acess.log, one line looks like
 
 ```
-166.111.176.63 - abc [08/Aug/2019:08:03:03 +0800] "GET / HTTP/1.1" 200 2058 "http://*/app/kibana" 
+166.111.*.* - abc [08/Aug/2019:08:03:03 +0800] "GET / HTTP/1.1" 200 2058 "http://*/app/kibana" 
 ```
 
 Note +0800 in the log, namely the log itself already contains information about time zone. In other words, anyone can confidently convert the log timestamps into UTC time. But for syslog, one line looks like
