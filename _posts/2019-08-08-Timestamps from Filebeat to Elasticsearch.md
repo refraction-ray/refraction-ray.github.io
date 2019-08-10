@@ -32,7 +32,7 @@ $ sudo filebeat setup -e # if filebeat is configured with output ES
 $ sudo filebeat setup -e -E output.logstash.enabled=false -E output.elasticsearch.hosts=["eshost:9200"] # if filebeat is configured with output logstash
 ```
 
-By this command, filebeat will do the following tasks: setup index template in ES, setup dashboards in kibana (and possible some extra tasks like machine learning in kibana but we don't need to care about them for now). If you have configured filebeat with output logstash, then you have to overwrite the configuration by `-E` flag at setup time. This is because filebeat has to connect to ES irrespective of its output. Otherwise, filebeat setup cannot write index template into ES.
+By this command, filebeat will do the following tasks: setup index template in ES, setup dashboards in kibana (and possible some extra tasks like machine learning in kibana but we don't need to care about them for now). If you have configured filebeat with output logstash, then you have to overwrite the configuration by `-E` flag at setup time. This is because filebeat has to connect to ES irrespective of its output. Otherwise, filebeat setup cannot write index template into ES. (Note if you have enabled user authetication in elasticsearch, you should also add two -E flags for the connection as ` -E output.elasticsearch.username=es_user -E output.elasticsearch.password=es_pass`).
 
 If you now start filebeat service, you can check logs in kibana at webfront, and you can find that all logs message are in the `message` key, and no further processing and paring on logs are applied. Namely, there is no keys as `system.syslog.program` or `system.syslog.message`. Squashing all logs into one key is not what we want, it is hard for us to search and analyse logs. But this is actually all that filebeat can do: just collecting log datas from log files line by line, and add some metadata of beat, say `beat.host`, `beat.version`, then send the item based on output configuration of filebeat. No reformatting happens, that's why filebeat is super lightweighted.
 
@@ -91,7 +91,7 @@ The answer to the first question: logs have different forms. For nginx/acess.log
 166.111.*.* - abc [08/Aug/2019:08:03:03 +0800] "GET / HTTP/1.1" 200 2058 "http://*/app/kibana" 
 ```
 
-Note +0800 in the log, namely the log itself already contains information about time zone. In other words, anyone can confidently convert the log timestamps into UTC time. But for syslog, one line looks like
+Note +0800 in the log, namely the log itself already contains information about time zone. In other words, anyone can confidently convert the log timestamps into UTC time. But for syslog, one typical line looks like
 
 ```
 Aug  8 10:39:07 master dnsmasq[2224]: query[A] 3.ubuntu.pool.ntp.org from *
