@@ -113,6 +113,8 @@ Note not only syslog and auth.log watched by system module have timestamp issues
 
 It is surprising that access log from nginx contains timezone information but error log doesn't. Anyway, remember adding convert_timezone option to nginx.yml under error section in filebeat modules configuration, too.
 
+Actually, error log for apache2 has no timezone information, either. And var.convert_timezone is not supported by apache2 module of filebeat on elastic stack 6.8.0. The patch [commit](https://github.com/elastic/beats/pull/13304) is only merged very recently in the main line. Therefore either you are going to try the latest version of elastic stack or you just hack one file: `/usr/share/filebeat/module/apache2/error/ingest/pipeline.json.` This is the json file for pipelines of apache2.error. And just add one line ` {< if .convert_timezone >}"timezone": "{{ beat.timezone }}",{< end >}` after data.formats in this file (I just shamelessly copied this line from system.syslog pipeline json file). Then reset the pipelines and everything should be fine for apache2.error log.  
+
 ## Summary
 
 One tip and two lessons.
