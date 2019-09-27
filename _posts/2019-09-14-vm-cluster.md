@@ -15,5 +15,3 @@ comments: true
 
 Bash script combined with powerful ansible bootstrap roles, enable HPC cluster provision and management in one line with well configured network, users, shared storage, mpi and slurm management.
 
-
-
