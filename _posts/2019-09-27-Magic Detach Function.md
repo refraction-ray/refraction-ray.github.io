@@ -88,6 +88,8 @@ The same object function as the one ready for AD! If we approach to the derivati
 
 ## Future work
 
-The first thing comes to my mind is to generalize the whole formalism to multivariate functions. What does the unit function looks like in that case? Or is our detach function here also enough for the construction of "weird" multivariate functions?
+The first thing comes to my mind is to generalize the whole formalism to multivariate functions. What does the unit function looks like in that case? Or is our detach function here also enough for the construction of "weird" multivariate functions? 
+
+**Update:** I have solved this problem, and detach function here is actually enough to define every multivariate function with every order or derivatives $$\mathcal{W}^{(n_1,n_2...n_m)}$$ customized (the construction proof is very similar to the proof above in completness thm). This again shows the great express power of $$\perp$$.
 
 Besides, how can this detach function be utilized in more broad fields of modern math and science? Can such a function drastically simplify some involved formalisms, such as higher order Feynman diagrams in quantum field theory? I believe there are many exciting directions to explore there.
