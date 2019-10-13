@@ -54,7 +54,7 @@ If we have the ability to construct function $$\mathcal{H}_n$$, whose value of e
 
 The strategy is to write down terms in $$\mathcal{H}_n$$ one by one. Starting from the analysis of the n-th order derivative, to make sure there is a $$h_n^{(n)}$$ in this order, we should write down $$h_n$$ for $$\mathcal{H}_n$$. Then, check (n-1)-th order derivative. We want to keep the result to zero in this order, but we are leaving with $$h_n^{(n-1)}$$ from current $$\mathcal{H}_n$$. So we need to add $$-\!\perp\!(h_n^{(n-1)})$$ in this order, which can be integrated back as a new term $$-x^{n-1}/(n-1)! \!\perp\!(h^{(n-1)}_n(x))$$ in $$\mathcal{H}_n$$. Now, check equality in (n-2)-th order derivative. We are again expecting zero, but there are now $$h_n^{(n-2)}-x\!\perp\!(h_n^{(n-1)}(x))$$ left. Again, we add terms to cancel them in this order as $$-\!\perp\!(h_n^{(n-2)}-x\!\perp\!(h_n^{(n-1)}(x)))$$. We can integrate this term back and add it to $$\mathcal{H}_n$$ as $$-x^{n-2}/(n-2)!\!\perp\!(h_n^{(n-2)}-x\!\perp\!(h_n^{(n-1)}(x)))$$. Following this strategy here, the construction of $$\mathcal{H}_n$$ can be done. QED
 
-**Update:** We don't need such a complicated construction proof above. A much simple way:
+**Update:** We don't need such a complicated construction proof above. A much simpler way:
 
 
 $$

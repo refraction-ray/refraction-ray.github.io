@@ -98,6 +98,7 @@ $$
 ### mini-batch
 
 最后我们来看一下，什么情况下，可以通过 mini-batch 的方式优化 ELBO，由此说明为什么 VAE 可以进行 mini-batch update（这不是 trivial 的）。观察 $$\eqref{ELBO}$$，
+
 $$
 ELBO=E_{q_\phi}[\ln P_\theta(\mathbf{x}\vert\mathbf{z})+\ln P_\theta(\mathbf{z})-\ln q_\phi(\mathbf{z})],
 $$
