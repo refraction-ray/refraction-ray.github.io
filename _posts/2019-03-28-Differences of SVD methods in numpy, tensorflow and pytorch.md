@@ -38,6 +38,8 @@ To summarize the difference from the above notebook, please refer the following 
 
 </div>
 
+Another sider note: in old version of pytorch, SVD API doesn't support broadcasting mechanism, this is fixed in recent version of torch, at least for pytorch 1.3.1.
+
 ## Summary
 
 The three methods of course share some similarity. For example, the returned `s` are all represented in a vector form of singular values instead of the `S` matrix itself in SVD decomposition.
