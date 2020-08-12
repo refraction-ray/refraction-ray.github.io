@@ -29,7 +29,7 @@ We only consider typical Markov decision process for now, which indicates that:
 
 1. (Enviroment aspect) The next state is only determined by the last state and the action: $$P(s_{t+1}\vert s_t, a_t)$$. 
 2. (Agent aspect) The action is only determined by current state: $$\pi_\theta(a_t\vert s_t)$$.
-3. (Enviroment aspect) The reward in each step is only determined by the current state, the current action, or, at most the next state: $$r_t = r(s_t, a_t, s_{t+1})$$. (This requirement is the key for everything in the way of this post, otherwise non-Markovian reward makes every line of this post invalid.)
+3. (Enviroment aspect) The reward in each step is only determined by the current state, the current action, or, at most the next state: $$r_t = r(s_t, a_t, s_{t+1})$$. (This requirement is the key for everything in this post, otherwise non-Markovian reward makes every line of this post invalid. However, one can always argue that by combining recent states in a history window, the integrated state and reward follow Markovian requirements as listed here.)
 
 The total reward is defined as $$R=\sum_{t=0}^{T-1} r_t$$. The formula in this post has finite time cutoff  $$T$$, but all formulas are easily generalized to $$T\rightarrow\infty$$ case.
 
