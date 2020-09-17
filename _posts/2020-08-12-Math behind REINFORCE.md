@@ -121,7 +121,7 @@ $$
 E[ (\nabla_\theta \pi_\theta(a_t\vert s_t)b_{t'}(s[0:T],a[0:T-1])] = 0.
 $$
 
-This can be done as long as b has dependence only on early times, namely $$b_t(s[0:t], a[0:t-1])$$. This automatically include the trivial case, where the baseline is a function of the current state $s_t$ such as another value network $$V(s_t)$$. This zero propety is proved in very similar fashion as the above derivation and you can see them in [^gae] Appendix B.
+This can be done as long as b has dependence only on early times, namely $$b_t(s[0:t], a[0:t-1])$$. This automatically include the trivial case, where the baseline is a function of the current state $$s_t$$ such as another value network $$V(s_t)$$. This zero propety is proved in very similar fashion as the above derivation and you can see them in [^gae] Appendix B.
 
 We can also change the reward sum part using the same philosophy. The reward part can be any $$A_t$$ as long as 
 

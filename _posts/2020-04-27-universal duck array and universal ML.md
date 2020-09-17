@@ -35,6 +35,8 @@ Google Tensornetwork 库的处理方式其实和 autoray 差不多，区别就�
 
 注意到这一方式只适合 ``np.fun(a)`` 的 dispatch，而对于 `a.dtype` 这种取属性的代码，还是没办法做到 universal。
 
+**Update: 2020.09.17** Numpy 开发组最近发了一篇 Nature, [Array programming with NumPy](https://www.nature.com/articles/s41586-020-2649-2.pdf)，其重点就放在了本文讨论的 universal duck array 问题上，其给出的解决方案正是 NEP-18.
+
 ## uarray
 
  [uarray](https://github.com/Quansight-Labs/uarray) 是另一个尝试提供 backend-agnistic array 的库。uarray 与 [NEP-22](https://numpy.org/neps/nep-0022-ndarray-duck-typing-overview.html) 有关。不过 NEP22 基本上就是一些 duck array 的兼容原则和路线图，没有任何技术细节，uarray 可以看成基于这之上的某种尝试。不过该项目文档生态明显没有成型，这里就不多讨论了。大体思路还是一样的，其想实现的东西，就是：
