@@ -9,15 +9,17 @@ comments: false
 # About Me
 ## Interests
 * Physics and Math
-  * Non-equilibrium thermodynamics
+  * Quantum computing and programming
+  * Non-equilibrium physics
   * Quantum algorithms and computational theory
-  * Interplay between correlation effects and topology characters
   * Interplay between artificial intelligence and quantum physics
 * Computer Science and Technology
   * High performance computing
   * Web development
   * Data science
   * Machine learning
+  * Cloud computing
+  * Open source
 * Economics and Finance
   * Macroeconomics
   * Quantitative finance
@@ -25,25 +27,24 @@ comments: false
 * Language and Culture
   * Linguistics
   * Korean language
-  * K-Pop music and Korean variety shows
+  * Korean music/variety shows/movies
   * Various kinds of youtube channels
   * Japanese language (*very early stage of learning*)
 * Misc
-  * Chinese history
-  * Education
+  * 中国历史，尤其是近现代史
+  * 教育与科普
   * 评书，相声
   * 红楼梦
 
+## CV
+
+My academic CV can be found [here](/about/cv.pdf).
+
 # Contact Me
-## Public Key
-See [here](/about/public-key.txt) (make sure the url you are visiting is <https://refraction-ray.github.io/about/public-key.txt>)
-
-Or from [here](https://pgp.mit.edu/pks/lookup?op=get&search=0x6AE1EACBD99AF122), the fingerprint is `53C6 5FE2 3CAB 6CE2 8D86  1D55 6AE1 EACB D99A F122`
-
 
 ## Mail
 
-znfesnpbh.rr#gmail
+znfesnpbh.#gmail
 
 
 ## Disqus and Github issues
