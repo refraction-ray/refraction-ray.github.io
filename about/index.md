@@ -1,63 +1,69 @@
 ---
 layout: page
-title: About 
+title: About
 tags: [about]
 date: 2018-01-06
 comments: false
 ---
 
-# About Me
-## Interests
-* Physics and Math
-  * Quantum computing and programming
-  * Non-equilibrium physics
-  * Quantum algorithms and computational theory
-  * Interplay between artificial intelligence and quantum physics
-* Computer Science and Technology
-  * High performance computing
-  * Web development
-  * Data science
-  * Machine learning
-  * Cloud computing
-  * Open source
-* Economics and Finance
-  * Macroeconomics
-  * Quantitative finance
-  * Investment
-* Language and Culture
-  * Linguistics
-  * Korean language
-  * Korean music/variety shows/movies
-  * Various kinds of youtube channels
-  * Japanese language (*very early stage of learning*)
-* Misc
-  * 中国历史，尤其是近现代史
-  * 教育与科普
-  * 评书，相声
-  * 红楼梦
 
-## CV
+<h2 style="text-align: center;"> Shi-Xin Zhang (张士欣) </h2>
 
-My academic CV can be found [here](/about/cv.pdf).
-
-# Contact Me
-
-## Mail
-
-znfesnpbh.#gmail
+<h3 style="text-align: center;"> Associate Professor <br>
+<a href="https://www.iop.cas.cn/"> Institue of Physics, Chinese Academy of Sciences</a> </h3>
 
 
-## Disqus and Github issues
+<div style="text-align: center;">
+<!-- 邮件链接 -->
+<a href="mailto:znfesnpbh@gmail.com" class="button" target="_blank" rel="noopener noreferrer">
+<span class="icon"><i class="fas fa-envelope"></i></span>
+</a>
+<!-- Google Scholar 链接 -->
+<a href="https://scholar.google.com/citations?user=Ut8nVqIAAAAJ" class="button" target="_blank" rel="noopener noreferrer">
+<span class="icon"><i class="fab fa-google"></i></span>
+</a>
+<!-- 简历链接 -->
+<a href="/about/cv.pdf" class="button" target="_blank" rel="noopener noreferrer">
+<span class="icon"><i class="fas fa-file-download"></i></span>
+</a>
+<!-- GitHub 链接 -->
+<a href="https://github.com/refraction-ray" class="button" target="_blank" rel="noopener noreferrer">
+<span class="icon"><i class="fab fa-github"></i></span>
+</a>
+<!-- LinkedIn 链接 -->
+<a href="https://www.linkedin.com/in/zhangshixin/" class="button" target="_blank" rel="noopener noreferrer">
+<span class="icon"><i class="fab fa-linkedin"></i></span>
+</a>
+</div>
 
-You are welcome to comment on my blogs or contact me on this site via disqus system below the [posts](/posts/). 
+## Experience
 
-Or you can even open github issues in the [repo for this blog sites](https://github.com/refraction-ray/refraction-ray.github.io/issues)  (only this repo is allowed to open irrelevant issues).
+* 2024.8 - now, Institute of Physics, Chinese Academy of Sciences, **Associate Professor**
 
-# 版权声明
+* 2021.7 - 2024.7, Tencent Quantum Laboratory, **Senior Research Scientist**
 
-* 本站所有内容，如非特别注明，均为原创，文章的最终的解释权归属作者本人。
-* 本站所有内容，如非特别注明，均采用[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)进行许可。
-* 该协议意味着转载时必须注明转载并注明原作者和原文链接，同时所有内容不得用于商业目的。最后，若对文章内容进行了修改，需要也采用上述协议。
-* 如确实额外需要对本站有关内容，进行超出以上协议规定的行为，比如商用，或修改同时改变许可协议等，请联系取得本人的授权。
-* 请尊重版权，尊重自己。
+## Education
 
+* 2016.8 - 2021.7, Institue for Advanced Study, Tsinghua University, **PhD in Physics**
+
+* 2012.8 - 2016.7, Department of Physics, Tsinghua University, **BSc in Physics**
+
+
+## Research
+
+Please see the full research profile via Google Scholar and CV links on this page.
+
+### Interests
+
+* **Quantum computing**: quantum algorithm, quantum simulation, quantum noise, quantum software.
+
+* **Non-equilibrium physics**: novel phases and phase transitions in non-equilibrium quantum systems including
+many-body localization, time crystal, random quantum circuits, measurement induced entanglement phase
+transition, information scrambling and protection.
+
+* **Artificial intelligence**: the interplay between machine learning infrastructure and models with quantum physics,
+quantum machine learning.
+
+### *Hiring*
+
+I am always looking for talented individuals (undergraduate students, PhD candidates, postdoctoral researchers, and research assistants). If you're passionate about research along relevant directions and eager to contribute to cutting-edge projects, please don't hesitate to reach out. I am open to discussions and look forward to exploring potential collaborations with you.

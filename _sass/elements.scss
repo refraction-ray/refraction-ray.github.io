@@ -329,3 +329,34 @@ kbd {
     font-weight: 300;
     margin-bottom: 10px;
 }
+
+.button {
+  display: inline-block;
+  margin: 4px; /* 按钮之间的间距 */
+  padding: 6px 6px;
+  color: #333;
+  background-color: transparent;
+  text-decoration: none;
+  border-radius: 8px;
+  transition:  transform 0.3s, border-color 0.3s;
+}
+
+.button:hover .icon,
+.button:focus .icon {
+  color: #f3dfb3; /* 鼠标悬浮或聚焦时图标颜色变化 */
+  transform: scale(1.2); /* 图标放大 */
+}
+
+/* 图标样式 */
+.button i {
+  margin-right: 5px; /* 图标与文本之间的间距（如果有文本） */
+  font-size: 2.2em; /* 根据需要调整图标大小 */
+}
+
+/* 响应式调整：当屏幕宽度小于600px时，堆叠按钮 */
+@media (max-width: 600px) {
+  .button {
+    display: block;
+    margin: 5px auto; /* 使按钮在小屏幕上垂直堆叠并居中 */
+  }
+}
