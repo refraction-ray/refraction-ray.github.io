@@ -34,7 +34,16 @@ comments: false
 <a href="https://www.linkedin.com/in/zhangshixin/" class="button" target="_blank" rel="noopener noreferrer">
 <span class="icon"><i class="fab fa-linkedin"></i></span>
 </a>
+<!-- ORCID 链接 -->
+<a href="https://orcid.org/0000-0003-0347-9750" class="button" target="_blank" rel="noopener noreferrer">
+<span class="icon"><i class="fab fa-orcid"></i></span>
+</a>
+<!-- researchgate 链接 -->
+<a href="https://www.researchgate.net/profile/Shi-Xin-Zhang" class="button" target="_blank" rel="noopener noreferrer">
+<span class="icon"><i class="fab fa-researchgate"></i></span>
+</a>
 </div>
+
 
 ## Experience
 
