@@ -75,4 +75,4 @@ quantum machine learning.
 
 ### *Hiring*
 
-I am always looking for talented individuals (undergraduate students, PhD candidates, postdoctoral researchers, and research assistants). If you're passionate about research along relevant directions and eager to contribute to cutting-edge projects, please don't hesitate to reach out. I am open to discussions and look forward to exploring potential collaborations with you.
+I am always looking for talented individuals (undergraduate students, PhD candidates, postdoctoral researchers, and research assistants). If you're passionate about research along relevant directions and eager to contribute to cutting-edge projects, please don't hesitate to reach out. I am open to discussions and look forward to exploring potential collaborations with you. Please see more info on [the website for our research group](https://sxzgroup.github.io/).
