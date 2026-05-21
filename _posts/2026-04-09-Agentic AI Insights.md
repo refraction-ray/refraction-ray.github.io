@@ -3,7 +3,7 @@ layout: post
 title: "Agentic AI Insights"
 date: 2026-04-09
 excerpt: "Agentic 编程与科研实践：构建个人护城河与缓解大模型的性格缺陷"
-tags: [python, machine learning]
+tags: [python, machine learning, llm]
 comments: true
 ---
 
