@@ -3,7 +3,7 @@ layout: post
 title: "TensorCircuit-NG：下一代科研基础设施"
 date: 2026-06-04
 excerpt: "当宣传趋同时，如何判断一个量超智平台是否真正成熟可用？"
-tags: [python, machine learning, quantum]
+tags: [python, machine learning, quantum computation]
 comments: true
 ---
 
