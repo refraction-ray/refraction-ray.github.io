@@ -62,7 +62,7 @@ comments: true
 
 TensorCircuit 的开发过程并不是一次性的代码发布，而是一条可以持续追踪的工程演进线索：从最初的个人开源版本，到腾讯量子实验室期间的开发版本，再到当前持续维护的 TensorCircuit-NG 版本，项目的核心代码、文档、测试和示例始终保持开放。GitHub 记录保存了完整开发历史，累计 star 和 fork 数超过 500，代码提交超过 2700 次，发行版本超过 30 个，并有来自世界各地的 30 余位开发者参与贡献。
 
-从工程体量看，TensorCircuit-NG 已经是一个平台级科学计算软件。项目累计包括约 7 万行代码，配套类型注释、单元测试、持续集成、文档和教程体系。目前仓库中已有近千个测试函数；这些测试并不只是形式上的覆盖率指标，而是 API 稳定性、跨后端一致性和长期维护质量的工程基础。
+从工程体量看，TensorCircuit-NG 已经是一个平台级科学计算软件。项目累计包括约 7 万行代码，配套类型注释、单元测试、持续集成、文档和教程体系。目前仓库中已有近千个测试函数；这些测试是 API 稳定性、跨后端一致性和长期维护质量的工程基础。
 
 生态资源同样重要。TensorCircuit-NG 文档、30 多个教程案例、170 多个应用实例、10 余类性能评测套件，以及配套量子计算教程，共同构成了一个可学习、可复用、可扩展的开发者生态。平台还面向 AI 原生工作流提供文章复现、代码翻译、性能优化等 AI 技能包，这意味着它不只是面向人工开发者，也在主动适配 AI Agent 参与科研软件开发的新范式。
 
@@ -105,13 +105,13 @@ NG 版本白皮书进一步系统总结了 TensorCircuit 在量子计算、超�
 
 一个平台可以通过市场宣传获得短期关注和热度，但无法单纯通过宣传获得持续引用。科研社区的使用情况本质上是一种长期投票机制。如果一个平台能够持续支撑不同机构、不同研究方向和不同团队的高质量工作，说明其已经具备了真实价值。
 
-引用 TensorCircuit 的学术工作已经超过 170 篇，在 2026 年过去的五个月里，就已经有 40 多篇工作引用。更关键的是，这些工作并不集中在单一方向，而是分布在量子模拟、量子机器学习、量子化学、量子传感、量子架构搜索和 AI4Science 等多个领域。
+引用 TensorCircuit 的学术工作已经超过 170 篇，在 2026 年过去的五个月里，就已经有 40 多篇工作引用。更关键的是，这些工作分布在量子模拟、量子机器学习、量子化学、量子传感、量子架构搜索和 AI4Science 等多个领域。
 
 ### 量子模拟与多体系统
 
 在量子多体系统、凝聚态物理和复杂量子动力学中，研究者往往需要大规模量子线路模拟、张量网络缩并和可微优化。这些任务对底层框架的性能、数值稳定性和自动微分能力都有较高要求。
 
-代表性工作包括 NVIDIA、Google、麻省理工学院、哈佛大学等团队的 [Zero and Finite Temperature Quantum Simulations Powered by Quantum Magic](https://quantum-journal.org/papers/q-2024-07-23-1422/)，浙江大学王浩华团队的 [Exploring nontrivial topology at quantum criticality in a superconducting processor](https://arxiv.org/abs/2501.04679/)，以及清华大学马雄峰团队的 [Variational LOCC-assisted quantum circuits for long-range entangled states](https://arxiv.org/abs/2409.07281)。这些文章说明，TensorCircuit 的应用并不局限于抽象算法演示，而是进入了量子多体物理和实验量子信息研究中的具体问题。
+代表性工作包括 NVIDIA、Google、麻省理工学院、哈佛大学等团队的 [Zero and Finite Temperature Quantum Simulations Powered by Quantum Magic](https://quantum-journal.org/papers/q-2024-07-23-1422/)，浙江大学王浩华团队的 [Exploring nontrivial topology at quantum criticality in a superconducting processor](https://arxiv.org/abs/2501.04679/)，以及清华大学马雄峰团队的 [Variational LOCC-assisted quantum circuits for long-range entangled states](https://arxiv.org/abs/2409.07281)。这些文章说明，TensorCircuit 的应用进入了量子多体物理和实验量子信息研究中的具体问题。
 
 ### 量子机器学习
 
