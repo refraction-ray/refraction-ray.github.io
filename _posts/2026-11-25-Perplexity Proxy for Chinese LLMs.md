@@ -165,6 +165,8 @@ Per-benchmark scores:
 
 Average reasoning tokens / visible output tokens per question:
 
+<div class="table-wrapper" markdown="block">
+
 | Model | MMLU-Pro | GPQA-D | MedX-Text | MedX-MM | BrowseComp | SimpleQA |
 |---|---|---|---|---|---|---|
 | Claude Opus 5.5 | 102 / 3 | 241 / 5 | 244 / 3 | 164 / 3 | 532 / 4 | 189 / 3 |
@@ -177,7 +179,11 @@ Average reasoning tokens / visible output tokens per question:
 | DeepSeek-V4.1-Flash | 0 / 45 | 0 / 263 | 0 / 3 | 0 / 13 | 0 / 2618 | 0 / 1 |
 | Hy4-Flash | 0 / 2 | 0 / 2 | 0 / 2 | 0 / 2 | 0 / 2 | 0 / 2 |
 
+</div>
+
 Full scores:
+
+<div class="table-wrapper" markdown="block">
 
 | Model | MMLU-Pro | GPQA-D | MedX-Text | MedX-MM | BrowseComp | SimpleQA | 4-benchmark avg | 6-benchmark avg |
 |---|---|---|---|---|---|---|---|---|
@@ -190,6 +196,8 @@ Full scores:
 | Hy4 | 78.3 | 61.1 | 38.7 | 54.7 | 27.3 | 48.0 | 58.2 | 51.4 |
 | DeepSeek-V4.1-Flash | 82.3 | 65.2 | 32.3 | 45.7 | 34.0 | 35.3 | 56.4 | 49.1 |
 | Hy4-Flash | 67.7 | 51.5 | 30.0 | 41.7 | 26.3 | 27.7 | 47.7 | 40.8 |
+
+</div>
 
 ## References
 
